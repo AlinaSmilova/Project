@@ -2,25 +2,31 @@ body {
   background: #b5d2f0;
   font-family: Arial, Arial, Helvetica, sans-serif;
 }
-h1 {
-  text-align: none;
-}
+
 button {
   margin-left: 105px;
   position: inherit;
   margin: 20px;
+  border-color: #b5d2f0;
 }
 span {
   margin-left: 40px;
 }
-.container-2 {
-  width: 300px;
-  vertical-align: middle;
-  white-space: nowrap;
-  position: relative;
+div {
+  margin: 20px;
+  text-align: center;
+}
+li {
+  list-style: none;
+}
+ul {
+  text-align: 0px;
 }
 .box {
-  margin: 100px auto;
-  width: 300px;
-  height: 50px;
+  margin: 30px;
+  max-width: 900px;
+  padding: 20px;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: beige;
 }

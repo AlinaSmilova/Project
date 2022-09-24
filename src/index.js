@@ -28,6 +28,10 @@ function displayWeatherCondition(response) {
   document.querySelector(
     "#temperature"
   ).innerHTML = `${response.data.main.temp}°C`;
+  document.querySelector(
+    "#humidity"
+  ).innerHTML = `${response.data.main.humidity}`;
+  document.querySelector("#wind").innerHTML = `${response.data.wind.speed}`;
 }
 function searchCity(city) {
   let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
