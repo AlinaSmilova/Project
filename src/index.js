@@ -32,10 +32,6 @@ function displayWeatherCondition(response) {
     "#humidity"
   ).innerHTML = `${response.data.main.humidity}`;
   document.querySelector("#wind").innerHTML = `${response.data.wind.speed}`;
-  forecast.forEach(function (forecastDay, index) {
-    if (index < 6) {
-      forecastHTML =
-        forecastHTML +
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
 }
