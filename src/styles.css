@@ -2,6 +2,7 @@ body {
   background: #c3dbf4;
   font-family: "Montserrat", sans-serif;
   font-weight: 300 bolder;
+  text-align: center;
 }
 
 button {
@@ -10,9 +11,7 @@ button {
   margin: 20px;
   border-color: #b5d2f0;
 }
-span {
-  margin-left: 40px;
-}
+
 div {
   margin: 20px;
   text-align: center;
