@@ -30,3 +30,6 @@ ul {
   border-radius: 5px;
   background-color: rgb(243, 243, 236);
 }
+.weather-forecast {
+  text-align: center;
+}
