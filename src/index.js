@@ -35,20 +35,21 @@ function formatDate(date) {
     "December",
   ];
   let month = monthes[monthIndex];
+
   return `${day} ${hours}:${minutes} ${month}`;
 }
-
+console.log(date);
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
   let days = [
-    "Sunday",
     "Monday",
     "Tuesday",
     "Wednesday",
     "Thursday",
     "Friday",
     "Saturday",
+    "Sunday",
   ];
 
   return days[day];
@@ -57,11 +58,9 @@ function displayForecast(response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
 
-  //let days = ["Thu", "Fri", "Sat", "Sun"];
-
   let forecastHTML = `<div class="row">`;
   forecast.forEach(function (forecastDay, index) {
-    if (index < 5) {
+    if (index < 6) {
       forecastHTML =
         forecastHTML +
         `
@@ -106,15 +105,20 @@ function getForecast(coordinates) {
 }
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.name;
+  document.querySelector("#temperature").innerHTML = `${Math.round(
+    response.data.main.temp
+  )}°C`;
   document.querySelector(
-    "#temperature"
-  ).innerHTML = `${response.data.main.temp}°C`;
+    "#feels_like-temperature"
+  ).innerHTML = `feels like ${Math.round(response.data.main.feels_like)}°C`;
+
   document.querySelector(
     "#humidity"
   ).innerHTML = `${response.data.main.humidity}`;
   document.querySelector("#wind").innerHTML = `${response.data.wind.speed}`;
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
+
   getForecast(response.data.coord);
   console.log(response);
 }
