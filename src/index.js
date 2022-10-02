@@ -19,14 +19,37 @@ function formatDate(date) {
     "Saturday",
   ];
   let day = days[dayIndex];
-
-  return `${day} ${hours}:${minutes}`;
+  let monthIndex = date.getMonth();
+  let monthes = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  let month = monthes[monthIndex];
+  return `${day} ${hours}:${minutes} ${month}`;
 }
 
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
-  let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thu", "Fri", "Sat"];
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
 
   return days[day];
 }
@@ -38,7 +61,7 @@ function displayForecast(response) {
 
   let forecastHTML = `<div class="row">`;
   forecast.forEach(function (forecastDay, index) {
-    if (index < 4) {
+    if (index < 5) {
       forecastHTML =
         forecastHTML +
         `
@@ -54,12 +77,13 @@ function displayForecast(response) {
                 forecastDay.weather[0].icon
               }@2x.png"
               alt=""
-              width="62"
+              width="90"
             />
             <div class="weather-forecast-temperatures">
-              <span class="weather-forecast-temperature-max">max   ${Math.round(
+              <span class="weather-forecast-temperature-max"> ${Math.round(
                 forecastDay.temp.max
               )}°</span>
+              <br>
               <span class="weather-forecast-temperature-min">min   ${Math.round(
                 forecastDay.temp.min
               )}° </span>
@@ -123,6 +147,7 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchPosition);
 }
 let dateElement = document.querySelector("#date");
+
 let currentTime = new Date();
 dateElement.innerHTML = formatDate(currentTime);
 

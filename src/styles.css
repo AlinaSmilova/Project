@@ -1,6 +1,6 @@
 body {
   background: #c3dbf4;
-  font-family: "Montserrat", sans-serif;
+
   font-weight: 30 bolder;
   text-align: center;
 }
@@ -13,21 +13,25 @@ button {
 }
 
 div {
-  margin: 20px;
+  margin: 2px;
   text-align: center;
+  font-family: "Montserrat", sans-serif, italic;
+  font-weight: 10 bolder;
 }
 span {
   text-align: center;
 }
 li {
   list-style: none;
+  font-size: medium;
 }
 ul {
   text-align: 0px;
+  font-size: large;
 }
 .box {
   margin: 30px;
-  max-width: 900px;
+  max-width: 1200px;
   padding: 20px;
   border: 1px solid white;
   border-radius: 5px;
@@ -37,8 +41,20 @@ ul {
   text-align: center;
 }
 .weather-forecast-temperature-min {
-  font-weight: 500 bolder;
+  font-size: smaller;
 }
 .weather-forecast-description {
-  font-family: "Montserrat", sans-serif, italic;
+  font-size: small;
+  font-style: italic;
+}
+.center {
+  font-style: italic;
+}
+.col-2 {
+  border: 1px solid white;
+  border-radius: 5px;
+  max-width: 150px;
+}
+.city-name {
+  font-size: larger;
 }
