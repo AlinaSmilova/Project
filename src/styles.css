@@ -1,7 +1,7 @@
 body {
   background: #c3dbf4;
   font-family: "Montserrat", sans-serif;
-  font-weight: 300 bolder;
+  font-weight: 30 bolder;
   text-align: center;
 }
 
@@ -14,6 +14,9 @@ button {
 
 div {
   margin: 20px;
+  text-align: center;
+}
+span {
   text-align: center;
 }
 li {
@@ -32,4 +35,10 @@ ul {
 }
 .weather-forecast {
   text-align: center;
+}
+.weather-forecast-temperature-min {
+  font-weight: 500 bolder;
+}
+.weather-forecast-description {
+  font-family: "Montserrat", sans-serif, italic;
 }
